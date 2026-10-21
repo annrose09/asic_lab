@@ -1,13 +1,13 @@
 
-set TOP_MODULE "fir_4tap"
+set TOP_MODULE "fir_4tap_pipelined"
 
-set_db init_lib_search_path /home/install/FOUNDRY/digital/45nm/dig/lib
-set_db init_hdl_search_path /home/vlsi52/24bvd1013/lab4/FIR_LAB/fir/
+set_db init_lib_search_path /home/install/FOUNDRY/digital/180nm/dig/lib
+set_db init_hdl_search_path /home/vlsi52/24bvd1013/lab4/FIR_LAB/fir_pipelined/
 
 read_libs slow.lib
-read_hdl {fir_4tap.v}
+read_hdl {fir_4tap_pipelined.v}
 elaborate 
-read_sdc fir_4tap.sdc
+read_sdc fir_4tap_pipelined.sdc
 
 set_db syn_generic_effort medium
 set_db syn_map_effort medium
